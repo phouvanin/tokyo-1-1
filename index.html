@@ -1,0 +1,226 @@
+
+<h2 class="sr-only">Dashboard ຍອດຂາຍໂປຣໂມຊັນ ຊື້ 1 ແຖມ 1 ໂຕກຽວ ວັນທີ 1-14 ພຶດສະພາ 2026</h2>
+
+<style>
+.metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center; }
+.metric-label { font-size: 12px; color: var(--color-text-secondary); margin: 0 0 4px; }
+.metric-value { font-size: 22px; font-weight: 500; margin: 0; color: var(--color-text-primary); }
+.metric-sub { font-size: 11px; margin: 2px 0 0; }
+.section-title { font-size: 14px; font-weight: 500; color: var(--color-text-secondary); margin: 1.5rem 0 0.75rem; }
+.badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+.badge-success { background: var(--color-background-success); color: var(--color-text-success); }
+.badge-warning { background: var(--color-background-warning); color: var(--color-text-warning); }
+.badge-danger { background: var(--color-background-danger); color: var(--color-text-danger); }
+.alert-box { background: var(--color-background-warning); border: 0.5px solid var(--color-border-warning); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; font-size: 13px; color: var(--color-text-warning); margin-bottom: 1rem; }
+</style>
+
+<div style="padding: 1rem 0;">
+
+<div class="alert-box">
+  ⚠️ ໂປຣໂມຊັນ ຊື້ 1 ແຖມ 1 ຍັງຢູ່ໃນໄລຍະເລີ່ມຕົ້ນ — ມີຍອດຂາຍພຽງ 2 ວັນ (ວັນທີ 5 ແລະ 8 ພ.ພ.) ຈາກທັງໝົດ 14 ວັນ
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 0.5rem;">
+  <div class="metric">
+    <p class="metric-label">ຍອດຂາຍທັງໝົດ</p>
+    <p class="metric-value">3 ເຊັດ</p>
+    <p class="metric-sub" style="color: var(--color-text-secondary);">1–14 ພ.ພ. (14 ວັນ)</p>
+  </div>
+  <div class="metric">
+    <p class="metric-label">ລາຍຮັບທັງໝົດ</p>
+    <p class="metric-value">30,000 ₭</p>
+    <p class="metric-sub" style="color: var(--color-text-secondary);">ລາຄາ 10,000 ₭/ເຊັດ</p>
+  </div>
+  <div class="metric">
+    <p class="metric-label">ສະເລ່ຍ/ວັນ (ທີ່ຂາຍໄດ້)</p>
+    <p class="metric-value">1.5 ເຊັດ</p>
+    <p class="metric-sub" style="color: var(--color-text-danger);">ເປົ້າ: 15 ເຊັດ/ວັນ</p>
+  </div>
+  <div class="metric">
+    <p class="metric-label">ອັດຕາບັນລຸເປົ້າ</p>
+    <p class="metric-value" style="color: #E24B4A;">10%</p>
+    <p class="metric-sub" style="color: var(--color-text-danger);">ຕ່ຳກວ່າເປົ້າຫຼາຍ</p>
+  </div>
+</div>
+
+<p class="section-title">📊 ຍອດຂາຍລາຍວັນ vs ເປົ້າໝາຍ (15 ເຊັດ/ວັນ)</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; font-size: 12px; color: var(--color-text-secondary);">
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #378ADD;"></span>ຍອດຂາຍຕົວຈິງ (ເຊັດ)</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #E24B4A;"></span>ເປົ້າໝາຍ 15 ເຊັດ</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #D3D1C7;"></span>ບໍ່ມີຍອດ (0 ເຊັດ)</span>
+</div>
+<div style="position: relative; width: 100%; height: 260px;">
+  <canvas id="dailyChart" role="img" aria-label="ຍອດຂາຍລາຍວັນ ໂປຣໂມຊັນ 1 ແຖມ 1">ວັນທີ 5: 2 ເຊັດ, ວັນທີ 8: 1 ເຊັດ, ວັນທີ່ເຫຼືອ: 0 ເຊັດ</canvas>
+</div>
+
+<p class="section-title">🏆 Top ເມນູຂາຍດີ</p>
+<div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 0.5px solid var(--color-border-tertiary);">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 18px; font-weight: 500; color: #F0C040;">🥇</span>
+      <div>
+        <p style="margin: 0; font-size: 13px; font-weight: 500; color: var(--color-text-primary);">ໂຕກຽວປູອັດ + ມາຍອງເນັດ</p>
+        <p style="margin: 0; font-size: 11px; color: var(--color-text-secondary);">ວັນທີ 5 ພ.ພ.</p>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <p style="margin: 0; font-size: 16px; font-weight: 500; color: #1D9E75;">2 ເຊັດ</p>
+      <p style="margin: 0; font-size: 11px; color: var(--color-text-secondary);">67%</p>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 18px; font-weight: 500;">🥈</span>
+      <div>
+        <p style="margin: 0; font-size: 13px; font-weight: 500; color: var(--color-text-primary);">ໂຕກຽວໃສ່ກອກ + ໝູສັບ</p>
+        <p style="margin: 0; font-size: 11px; color: var(--color-text-secondary);">ວັນທີ 8 ພ.ພ.</p>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <p style="margin: 0; font-size: 16px; font-weight: 500; color: #378ADD;">1 ເຊັດ</p>
+      <p style="margin: 0; font-size: 11px; color: var(--color-text-secondary);">33%</p>
+    </div>
+  </div>
+</div>
+
+<p class="section-title">📈 ສັດສ່ວນເມນູ</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; font-size: 12px; color: var(--color-text-secondary);">
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #1D9E75;"></span>ປູອັດ+ມາຍອງເນັດ (67%)</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #378ADD;"></span>ໃສ່ກອກ+ໝູສັບ (33%)</span>
+</div>
+<div style="position: relative; width: 100%; height: 200px;">
+  <canvas id="pieChart" role="img" aria-label="ສັດສ່ວນເມນູ 1 ແຖມ 1">ປູອັດ 67%, ໃສ່ກອກ 33%</canvas>
+</div>
+
+<p class="section-title">📋 ສະຫຼຸບລາຍວັນ</p>
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed;">
+  <thead>
+    <tr style="background: var(--color-background-secondary);">
+      <th style="padding: 8px 10px; text-align: left; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); font-weight: 500; width: 18%;">ວັນທີ</th>
+      <th style="padding: 8px 10px; text-align: center; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); font-weight: 500; width: 18%;">ຈຳນວນ (ເຊັດ)</th>
+      <th style="padding: 8px 10px; text-align: right; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); font-weight: 500; width: 26%;">ລາຍຮັບ (₭)</th>
+      <th style="padding: 8px 10px; text-align: center; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); font-weight: 500; width: 20%;">% ເປົ້າ</th>
+      <th style="padding: 8px 10px; text-align: center; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); font-weight: 500; width: 18%;">ສະຖານະ</th>
+    </tr>
+  </thead>
+  <tbody id="summaryTable"></tbody>
+</table>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const dailyData = [
+  { day: '1 ພ.ພ.', sets: 0 },
+  { day: '2 ພ.ພ.', sets: 0 },
+  { day: '3 ພ.ພ.', sets: 0 },
+  { day: '4 ພ.ພ.', sets: 0 },
+  { day: '5 ພ.ພ.', sets: 2 },
+  { day: '6 ພ.ພ.', sets: 0 },
+  { day: '7 ພ.ພ.', sets: 0 },
+  { day: '8 ພ.ພ.', sets: 1 },
+  { day: '9 ພ.ພ.', sets: 0 },
+  { day: '10 ພ.ພ.', sets: 0 },
+  { day: '11 ພ.ພ.', sets: 0 },
+  { day: '12 ພ.ພ.', sets: 0 },
+  { day: '13 ພ.ພ.', sets: 0 },
+  { day: '14 ພ.ພ.', sets: 0 },
+];
+
+const target = 15;
+
+new Chart(document.getElementById('dailyChart'), {
+  type: 'bar',
+  data: {
+    labels: dailyData.map(d => d.day),
+    datasets: [
+      {
+        label: 'ຍອດຂາຍ (ເຊັດ)',
+        data: dailyData.map(d => d.sets),
+        backgroundColor: dailyData.map(d => d.sets === 0 ? '#D3D1C7' : d.sets >= target ? '#1D9E75' : '#E24B4A'),
+        borderRadius: 4,
+        barPercentage: 0.6,
+      },
+      {
+        label: 'ເປົ້າໝາຍ',
+        data: dailyData.map(() => target),
+        type: 'line',
+        borderColor: '#E24B4A',
+        borderWidth: 2,
+        borderDash: [6, 4],
+        pointRadius: 0,
+        fill: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.datasetIndex === 0
+            ? (ctx.raw === 0 ? ' ບໍ່ມີຍອດ' : ` ${ctx.raw} ເຊັດ (${Math.round(ctx.raw/target*100)}% ຂອງເປົ້າ)`)
+            : ` ເປົ້າ: ${ctx.raw} ເຊັດ`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10 }, color: '#888', maxRotation: 45 } },
+      y: {
+        beginAtZero: true,
+        max: 20,
+        grid: { color: 'rgba(128,128,128,0.1)' },
+        ticks: { stepSize: 5, font: { size: 11 }, color: '#888' }
+      }
+    }
+  }
+});
+
+new Chart(document.getElementById('pieChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['ໂຕກຽວປູອັດ+ມາຍອງເນັດ', 'ໂຕກຽວໃສ່ກອກ+ໝູສັບ'],
+    datasets: [{
+      data: [2, 1],
+      backgroundColor: ['#1D9E75', '#378ADD'],
+      borderWidth: 2,
+      borderColor: 'transparent',
+      hoverOffset: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: '55%',
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.raw} ເຊັດ (${Math.round(ctx.raw/3*100)}%)` } }
+    }
+  }
+});
+
+const tbody = document.getElementById('summaryTable');
+dailyData.forEach(d => {
+  const pct = d.sets === 0 ? 0 : Math.round(d.sets / target * 100);
+  const revenue = (d.sets * 10000).toLocaleString();
+  const badge = d.sets === 0
+    ? '<span class="badge badge-danger">ບໍ່ມີຍອດ</span>'
+    : pct >= 100 ? '<span class="badge badge-success">✓ ຜ່ານເປົ້າ</span>'
+    : '<span class="badge badge-warning">ຕ່ຳກວ່າເປົ້າ</span>';
+  const tr = document.createElement('tr');
+  tr.style.borderBottom = '0.5px solid var(--color-border-tertiary)';
+  const pctColor = d.sets === 0 ? '#E24B4A' : pct >= 100 ? '#1D9E75' : '#BA7517';
+  tr.innerHTML = `
+    <td style="padding: 8px 10px; color: var(--color-text-primary);">${d.day}</td>
+    <td style="padding: 8px 10px; text-align: center; font-weight: 500;">${d.sets}</td>
+    <td style="padding: 8px 10px; text-align: right;">${d.sets > 0 ? revenue : '-'}</td>
+    <td style="padding: 8px 10px; text-align: center; color: ${pctColor};">${d.sets > 0 ? pct + '%' : '-'}</td>
+    <td style="padding: 8px 10px; text-align: center;">${badge}</td>
+  `;
+  tbody.appendChild(tr);
+});
+</script>
